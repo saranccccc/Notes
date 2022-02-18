@@ -1,0 +1,17 @@
+State - data storage
+
+Statefull Authentication : server will store the data.
+Request where client and server is passing the session details. session is nothing but the memnory created in server for authenticated users. this session will have seesion 
+id ann other required infomration and it will be sent to the client which is cosidered as cookies in client side.this cookies will be send with consecutive request by client, the server will
+will use this cookie info/ session info to validate the client. when the client does logout the session will be invalidated by the server.
+
+
+Stateless Authentication
+
+Server will generate the token the same will be sent to the clinet. and the client will save this token. token will be encoded format.
+whenn the client add this token in the next request. if the token is valid then server will give the response otherwise server will ask the client to login again. it wont create any
+memory at the client side .
+The token is encoded and decoded by the sectret key and it will be stored only at the server side. 
+There is no logout term here, token will be expired after some time. this time is called as validity
+
+
